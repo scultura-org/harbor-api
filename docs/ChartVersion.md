@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **ApiVersion** | **string** | The API version of this chart | [default to null]
 **AppVersion** | **string** | The version of the application enclosed in the chart | [default to null]
 **Deprecated** | **bool** | Whether or not this chart is deprecated | [optional] [default to null]
-**Labels** | [***Labels**](Labels.md) |  | [optional] [default to null]
+**Labels** | [**[]Label**](Label.md) | A list of label | [optional] [default to null]
 **Created** | **string** | The created time of the chart entry | [optional] [default to null]
 **Removed** | **bool** | A flag to indicate if the chart entry is removed | [optional] [default to null]
 **Digest** | **string** | The digest value of the chart entry | [optional] [default to null]
