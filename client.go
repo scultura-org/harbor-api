@@ -45,11 +45,75 @@ type APIClient struct {
 
 	// API Services
 
-	ChartRepositoryApi *ChartRepositoryApiService
+	ArtifactApi *ArtifactApiService
+
+	AuditlogApi *AuditlogApiService
+
+	ConfigureApi *ConfigureApiService
+
+	GcApi *GcApiService
+
+	HealthApi *HealthApiService
+
+	IconApi *IconApiService
+
+	ImmutableApi *ImmutableApiService
 
 	LabelApi *LabelApiService
 
-	ProductsApi *ProductsApiService
+	LdapApi *LdapApiService
+
+	MemberApi *MemberApiService
+
+	OidcApi *OidcApiService
+
+	PingApi *PingApiService
+
+	PreheatApi *PreheatApiService
+
+	ProjectApi *ProjectApiService
+
+	ProjectMetadataApi *ProjectMetadataApiService
+
+	PurgeApi *PurgeApiService
+
+	QuotaApi *QuotaApiService
+
+	RegistryApi *RegistryApiService
+
+	ReplicationApi *ReplicationApiService
+
+	RepositoryApi *RepositoryApiService
+
+	RetentionApi *RetentionApiService
+
+	RobotApi *RobotApiService
+
+	Robotv1Api *Robotv1ApiService
+
+	ScanApi *ScanApiService
+
+	ScanAllApi *ScanAllApiService
+
+	ScanDataExportApi *ScanDataExportApiService
+
+	ScannerApi *ScannerApiService
+
+	SearchApi *SearchApiService
+
+	StatisticApi *StatisticApiService
+
+	SystemCVEAllowlistApi *SystemCVEAllowlistApiService
+
+	SysteminfoApi *SysteminfoApiService
+
+	UserApi *UserApiService
+
+	UsergroupApi *UsergroupApiService
+
+	WebhookApi *WebhookApiService
+
+	WebhookjobApi *WebhookjobApiService
 }
 
 type service struct {
@@ -68,9 +132,41 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.ChartRepositoryApi = (*ChartRepositoryApiService)(&c.common)
+	c.ArtifactApi = (*ArtifactApiService)(&c.common)
+	c.AuditlogApi = (*AuditlogApiService)(&c.common)
+	c.ConfigureApi = (*ConfigureApiService)(&c.common)
+	c.GcApi = (*GcApiService)(&c.common)
+	c.HealthApi = (*HealthApiService)(&c.common)
+	c.IconApi = (*IconApiService)(&c.common)
+	c.ImmutableApi = (*ImmutableApiService)(&c.common)
 	c.LabelApi = (*LabelApiService)(&c.common)
-	c.ProductsApi = (*ProductsApiService)(&c.common)
+	c.LdapApi = (*LdapApiService)(&c.common)
+	c.MemberApi = (*MemberApiService)(&c.common)
+	c.OidcApi = (*OidcApiService)(&c.common)
+	c.PingApi = (*PingApiService)(&c.common)
+	c.PreheatApi = (*PreheatApiService)(&c.common)
+	c.ProjectApi = (*ProjectApiService)(&c.common)
+	c.ProjectMetadataApi = (*ProjectMetadataApiService)(&c.common)
+	c.PurgeApi = (*PurgeApiService)(&c.common)
+	c.QuotaApi = (*QuotaApiService)(&c.common)
+	c.RegistryApi = (*RegistryApiService)(&c.common)
+	c.ReplicationApi = (*ReplicationApiService)(&c.common)
+	c.RepositoryApi = (*RepositoryApiService)(&c.common)
+	c.RetentionApi = (*RetentionApiService)(&c.common)
+	c.RobotApi = (*RobotApiService)(&c.common)
+	c.Robotv1Api = (*Robotv1ApiService)(&c.common)
+	c.ScanApi = (*ScanApiService)(&c.common)
+	c.ScanAllApi = (*ScanAllApiService)(&c.common)
+	c.ScanDataExportApi = (*ScanDataExportApiService)(&c.common)
+	c.ScannerApi = (*ScannerApiService)(&c.common)
+	c.SearchApi = (*SearchApiService)(&c.common)
+	c.StatisticApi = (*StatisticApiService)(&c.common)
+	c.SystemCVEAllowlistApi = (*SystemCVEAllowlistApiService)(&c.common)
+	c.SysteminfoApi = (*SysteminfoApiService)(&c.common)
+	c.UserApi = (*UserApiService)(&c.common)
+	c.UsergroupApi = (*UsergroupApiService)(&c.common)
+	c.WebhookApi = (*WebhookApiService)(&c.common)
+	c.WebhookjobApi = (*WebhookjobApiService)(&c.common)
 
 	return c
 }

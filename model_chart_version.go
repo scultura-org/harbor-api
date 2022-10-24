@@ -32,8 +32,9 @@ type ChartVersion struct {
 	// The version of the application enclosed in the chart
 	AppVersion string `json:"appVersion"`
 	// Whether or not this chart is deprecated
-	Deprecated bool    `json:"deprecated,omitempty"`
-	Labels     *Labels `json:"labels,omitempty"`
+	Deprecated bool `json:"deprecated,omitempty"`
+	// A list of label
+	Labels []Label `json:"labels,omitempty"`
 	// The created time of the chart entry
 	Created string `json:"created,omitempty"`
 	// A flag to indicate if the chart entry is removed

@@ -9,7 +9,6 @@
 
 package swagger
 
-// The permission
 type Permission struct {
 	// The permission resoruce
 	Resource string `json:"resource,omitempty"`

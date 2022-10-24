@@ -9,23 +9,25 @@
 
 package swagger
 
+import (
+	"time"
+)
+
 type Label struct {
-	// The ID of label.
-	Id int32 `json:"id,omitempty"`
-	// The name of label.
+	// The ID of the label
+	Id int64 `json:"id,omitempty"`
+	// The name the label
 	Name string `json:"name,omitempty"`
-	// The description of label.
+	// The description the label
 	Description string `json:"description,omitempty"`
-	// The color of label.
+	// The color the label
 	Color string `json:"color,omitempty"`
-	// The scope of label, g for global labels and p for project labels.
+	// The scope the label
 	Scope string `json:"scope,omitempty"`
-	// The project ID if the label is a project label.
-	ProjectId int32 `json:"project_id,omitempty"`
-	// The creation time of label.
-	CreationTime string `json:"creation_time,omitempty"`
-	// The update time of label.
-	UpdateTime string `json:"update_time,omitempty"`
-	// The label is deleted or not.
-	Deleted bool `json:"deleted,omitempty"`
+	// The ID of project that the label belongs to
+	ProjectId int64 `json:"project_id,omitempty"`
+	// The creation time the label
+	CreationTime time.Time `json:"creation_time,omitempty"`
+	// The update time of the label
+	UpdateTime time.Time `json:"update_time,omitempty"`
 }
